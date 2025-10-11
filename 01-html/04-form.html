@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 04 - Form</title>
-  </head>
-  <body>
-    <main>
-      <form action="/submit">
-        <!-- Add your code here -->
-      </form>
-    </main>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Exercise 04 - Form</title>
+    </head>
+    <body>
+        <main>
+            <form action="/submit">
+                <fieldset>
+                    <legend>Contact Us</legend>
+
+                    <p>
+                        <label for="name">Full name</label><br />
+                        <input id="name" name="name" type="text" required />
+                    </p>
+
+                    <p>
+                        <label for="email">Email</label><br />
+                        <input id="email" name="email" type="email" required />
+                    </p>
+
+                    <p>
+                        <label for="character">Favorite Bikini Bottom Character</label><br />
+                        <select id="character" name="character">
+                            <option value="">— Select one —</option>
+                            <option>Spongebob</option>
+                            <option>Patrick</option>
+                            <option>Sandy</option>
+                            <option>Mr Krabs</option>
+                            <option>Squidward</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" name="newsletter" />
+                            Sign me up for the newsletter
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="message">Message</label><br />
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </p>
+
+                    <button type="submit">Send</button>
+                </fieldset>
+
+            </form>
+        </main>
+    </body>
 </html>
