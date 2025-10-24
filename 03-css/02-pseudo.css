@@ -1,4 +1,5 @@
-.container {
-  width: 600px;
-  margin: 40px auto;
-}
+.container{ width:600px; margin:40px auto; line-height:1.6; }
+.paragraph::first-line{ color:var(--teal); }
+.paragraph::first-letter{ float:left; font-size:3rem; line-height:1; padding-right:8px; color:var(--royalblue); }
+.paragraph + .paragraph::before{ content:"— "; color:var(--magenta); }
+

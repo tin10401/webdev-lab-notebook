@@ -1,26 +1,36 @@
-:root {
-  --darkviolet: #9400d3;
-  --maroon: #800000;
-  --darkgolden: #8f6805;
+:root{ --darkviolet:#9400d3; --maroon:#800000; --darkgolden:#8f6805; }
+
+.main{ position:relative; min-height:700px; }
+
+.box{ padding:10px; color:var(--white); }
+
+.static{
+  position:static;
+  width:300px; height:400px;
+  background:var(--darkviolet);
 }
 
-.box {
-  padding: 10px;
-  color: var(--white);
+.relative{
+  position:relative;
+  width:300px; height:400px;
+  top:20px; left:40px;
+  background:var(--purple);
+  z-index:2;
 }
 
-.static {
-  background-color: var(--darkviolet);
+.absolute{
+  position:absolute;
+  left:0; bottom:70px;
+  width:100%; height:70px;
+  background:var(--maroon);
+  z-index:3;
 }
 
-.relative {
-  background-color: var(--purple);
+.fixed{
+  position:fixed;
+  left:0; bottom:0;
+  width:100%; height:70px;
+  background:var(--darkgolden);
+  z-index:1;
 }
 
-.absolute {
-  background-color: var(--maroon);
-}
-
-.fixed {
-  background-color: var(--darkgolden);
-}
