@@ -1,18 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercise 03 - Bootstrap Grid</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../_styles/styles.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>03 - Bootstrap Grid</h1>
-    <!-- Add your code here -->
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 03 - Bootstrap Grid</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="h4 text-center mb-3">Bootstrap Grid</h1>
+
+    <!--
+      Mobile: stacks all blocks top-to-bottom (matches the thin screenshot).
+      >= md: mosaic layout (middle screenshot).
+      >= xl: slightly different placement to mimic the third screenshot.
+    -->
+    <div class="row g-3">
+      <!-- ONE -->
+      <div class="col-12 col-md-8 order-1 order-xl-1">
+        <div class="p-3 text-white text-center rounded bg-primary">One</div>
+      </div>
+
+      <!-- TWO -->
+      <div class="col-12 col-md-4 order-2 order-xl-4">
+        <div class="p-3 text-white text-center rounded bg-primary">Two</div>
+      </div>
+
+      <!-- THREE -->
+      <div class="col-12 col-md-4 order-3 order-xl-2">
+        <div class="p-3 text-white text-center rounded bg-primary">Three</div>
+      </div>
+
+      <!-- FOUR -->
+      <div class="col-12 col-md-8 order-4 order-xl-3">
+        <div class="p-3 text-white text-center rounded bg-primary">Four</div>
+      </div>
+
+      <!-- FIVE -->
+      <div class="col-12 col-md-4 order-5">
+        <div class="p-3 text-white text-center rounded bg-primary">Five</div>
+      </div>
+
+      <!-- SIX -->
+      <div class="col-12 col-md-4 order-6">
+        <div class="p-3 text-white text-center rounded bg-primary">Six</div>
+      </div>
+
+      <!-- SEVEN -->
+      <div class="col-12 col-md-4 order-7">
+        <div class="p-3 text-white text-center rounded bg-primary">Seven</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
+
