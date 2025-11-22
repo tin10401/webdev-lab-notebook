@@ -8,11 +8,11 @@ const characters = [
   { id: 40, name: 'Jaime', house: 'Lannister' },
   { id: 41, name: 'Cersei', house: 'Lannister' },
   { id: 42, name: 'Tyrion', house: 'Lannister' },
-  { id: 50, name: 'Tywin', house: 'Lannister' },
+  { id: 49, name: 'Tywin', house: 'Lannister' },
   { id: 53, name: 'Kevan', house: 'Lannister' },
-  { id: 75, name: 'Daenerys', house: 'Targaryen' },
+  { id: 72, name: 'Daenerys', house: 'Targaryen' },
   { id: 77, name: 'Viserys', house: 'Targaryen' },
-  { id: 81, name: 'Rhaegar', house: 'Targaryen' },
+  { id: 79, name: 'Rhaegar', house: 'Targaryen' },
   { id: 83, name: 'Theon', house: 'Greyjoy' },
   { id: 84, name: 'Yara', house: 'Greyjoy' },
   { id: 87, name: 'Davos', house: 'Seaworth' },
@@ -22,20 +22,20 @@ const characters = [
 const mapNameFamily = (characters) => {
   // Return an array with the name and house of each character
   // Format: "Arya, of House Stark"
-
-  return characters;
+  return characters.map((c) => `${c.name}, of House ${c.house}`);
 };
 
 const filterFamily = (characters, house) => {
   // Return an array with only the characters from a given house
-
-  return characters;
+  return characters.filter((c) => c.house === house);
 };
 
 const reduceHouses = (characters) => {
   // Return an object with the number of characters from each house
-
-  return characters;
+  return characters.reduce((acc, c) => {
+    acc[c.house] = (acc[c.house] || 0) + 1;
+    return acc;
+  }, {});
 };
 
 console.log(mapNameFamily(characters));
@@ -85,3 +85,4 @@ console.log(reduceHouses(characters));
 //   Seaworth: 1,
 //   Tarth: 1
 // }
+
